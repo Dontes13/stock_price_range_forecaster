@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 ## Usage/Examples
 
-- **Run the notebook:** Open `notebooks/Team_14B.ipynb` in your preferred environment (e.g., Google Colab, Jupyter Lab, Jupyter Notebook, VS Code).
+- **Run the notebook:** Open `notebooks/forecasting_notebook.ipynb` in your preferred environment (e.g., Google Colab, Jupyter Lab, Jupyter Notebook, VS Code).
 
 - **Examine the results:** The notebook contains detailed explanations and markdown to guide you through each step, including data preparation, training, evaluation, and visualizations of GRU vs LSTM performance. You can run the cells sequentially to reproduce our results. Results and figures are saved to the `results/` and `figures/` folders.
 
