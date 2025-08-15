@@ -71,5 +71,5 @@ Create an interactive dashboard or API for real-time stock range predictions.
 
 ---
 
-## Thank You 🙏
+## Thank You 
 A big thank you to our AI4ALL instructors and mentors for their guidance and feedback throughout the program. Their support was crucial in shaping this project and helping us achieve our goals.
