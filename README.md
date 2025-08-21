@@ -90,7 +90,8 @@ Actual Open: 110.60, Pred Open: 110.17 | Actual Close: 110.73, Pred Close: 111.1
 ---
 
 ## 🚀 Live Demo
-Try the model live on Streamlit: [Stock Price Forecaster Demo]([https://your-streamlit-link.streamlit.app/](https://time-series-forecast-model-pao9jxpoaqkjfwkrhgj6bl.streamlit.app/))
+Try the model live on Streamlit: [Stock Price Forecaster Demo]([https://time-series-forecast-model-pao9jxpoaqkjfwkrhgj6bl.streamlit.app/](https://time-series-forecast-model-pao9jxpoaqkjfwkrhgj6bl.streamlit.app/))
+
 
 ---
 
