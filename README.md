@@ -29,6 +29,10 @@ This project implements and compares two deep learning models — **LSTM** and *
 
 LSTM outperformed GRU in both Open and Close price predictions.
 
+!Visualization](path/to/your/graph.png)
+
+
+
 ---
 
 ## 🗂 Project Structure
@@ -86,6 +90,11 @@ Actual Open: 110.60, Pred Open: 110.17 | Actual Close: 110.73, Pred Close: 111.1
 - NumPy & Pandas
 - scikit-learn
 - Matplotlib & Seaborn
+
+---
+
+## 🚀 Live Demo
+Try the model live on Streamlit: [Stock Price Forecaster Demo]([https://your-streamlit-link.streamlit.app/](https://time-series-forecast-model-pao9jxpoaqkjfwkrhgj6bl.streamlit.app/))
 
 ---
 
