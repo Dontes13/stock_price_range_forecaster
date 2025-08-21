@@ -27,6 +27,8 @@ This project implements and compares two deep learning models — **LSTM** and *
 | LSTM | _10.7422_ | _16.8829_ |
 | GRU  | _62.9326_ |  _50.9872_ |
 
+LSTM outperformed GRU in both Open and Close price predictions.
+
 ---
 
 ## 🗂 Project Structure
