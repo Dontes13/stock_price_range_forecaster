@@ -1,75 +1,94 @@
-# Stock Price Range Forecaster (GRU vs LSTM)
+# 📈 Stock Price Prediction (LSTM vs GRU)
 
-Stock market forecasting plays a vital role in helping investors and analysts make informed decisions. In this project, we focus on predicting the **next-day high–low price range** of a stock using deep learning sequence models. We compare **Gated Recurrent Unit (GRU)** and **Long Short-Term Memory (LSTM)** architectures to determine which model better captures time series patterns in stock price data.
-
-Our pipeline ensures fair comparison by using the same preprocessing, feature set, and evaluation metrics for both models.  
-Developed as part of the **AI4ALL Summer Program**.
+This project implements and compares two deep learning models — **LSTM** and **GRU** — to predict **next-day Open and Close prices** from historical OHLCV data. Models are built with **PyTorch** and trained on rolling **30-day** sequences.
 
 ---
 
-## Our Team 🚀
-**Dante Santurian** – University of Michigan  
-<!-- Add any teammates here if applicable -->
+## 🧠 Models
+- **LSTM (Long Short-Term Memory):** Captures long-term dependencies in time series.
+- **GRU (Gated Recurrent Unit):** Lighter alternative with fewer parameters.
 
 ---
 
-## Features
-
-**Implementation of Deep Learning Models:**  
-Jupyter Notebook showcasing GRU and LSTM architectures for range prediction.
-
-**Consistent Preprocessing & Fair Comparison:**  
-Sliding window sequence generation, normalization, and identical train/validation/test splits.
-
-**Evaluation Metrics:**  
-MAE (Mean Absolute Error) and RMSE (Root Mean Square Error) to measure predictive accuracy.
-
-**Result Visualizations:**  
-Clear and interpretable charts comparing GRU vs LSTM performance.
-
-**Reproducible Pipeline:**  
-Easy-to-run code that generates metrics and visualizations from raw OHLCV data.
+## 🔧 Features
+- Data preprocessing with **pandas**, **NumPy**, **scikit-learn**
+- Sequence windowing (past 30 days → next-day prediction)
+- Training & inference with **PyTorch**
+- Saved artifacts: **`lstm_model_weights.pth`**, **`scaler.save`**
+- Performance comparison using **MSE** (per target)
+- Visualizations of actual vs. predicted prices
+- Ready to integrate with **Streamlit** (this repo) or **Flask**
 
 ---
 
-## Getting Started
-Clone the repo and install required dependencies with pip.
+## 📊 Results
+| Model | MSE (Open) | MSE (Close) |
+|------|-------------|-------------|
+| LSTM | _e.g., 10.7422_ | _e.g., 16.8829_ |
+| GRU  | _e.g., 62.9326_ | _e.g., 50.9872_ |
 
-```bash
-pip install -r requirements.txt
+> Replace the example numbers with your own metrics.
+
+---
+
+## 🗂 Project Structure
+```
+.
+├── README.md
+├── requirements.txt
+├── app.py                  # Streamlit app
+├── model.py                # LSTM/GRU definitions
+├── lstm_model_weights.pth  # trained weights (PyTorch state_dict)
+├── scaler.save             # fitted MinMaxScaler (joblib)
+└── forecasting_notebook.ipynb  # training/experiments (optional)
 ```
 
 ---
 
-## Usage/Examples
+## 🚀 Quickstart
+1) Install dependencies  
+```bash
+pip install -r requirements.txt
+```
 
-- **Run the notebook:** Open `forecasting_notebook.ipynb` in your preferred environment (e.g., Google Colab, Jupyter Lab, Jupyter Notebook, VS Code).
+2) Run the Streamlit app  
+```bash
+streamlit run app.py
+```
 
-- **Examine the results:** The notebook contains detailed explanations and markdown to guide you through each step, including data preparation, training, evaluation, and visualizations of GRU vs LSTM performance. You can run the cells sequentially to reproduce our results, which are displayed directly in the notebook outputs.
-
-- **Modify for your use case:** Adapt model parameters (e.g., window size, features, hidden units) to suit different training scenarios and datasets.
-
----
-
-## Future Directions
-
-**Experiment with Different Architectures**  
-Explore alternative time series models such as Temporal Convolutional Networks (TCNs) or Transformers, and optimize hyperparameters to identify a model that balances accuracy and efficiency.
-
-**Implement Feature Expansion**  
-Incorporate technical indicators, sentiment analysis, or macroeconomic data to improve predictive performance.
-
-**Deploy as a Web App**  
-Create an interactive dashboard or API for real-time stock range predictions.
+3) Upload a CSV with columns:
+```
+Open, High, Low, Close, Volume
+```
+(Feature order must match the scaler used during training.)
 
 ---
 
-## Project Artifacts
-- **Project Proposal**: *link here*  
-- **Final Presentation**: *link here*  
-- **Project Poster**: *link here*
+## 🧪 Example Output
+```
+Actual Open: 111.20, Pred Open: 110.68 | Actual Close: 109.14, Pred Close: 111.37
+Actual Open: 110.60, Pred Open: 110.17 | Actual Close: 110.73, Pred Close: 111.18
+...
+```
 
 ---
 
-## Thank You 
-A big thank you to our AI4ALL instructors and mentors for their guidance and feedback throughout the program. Their support was crucial in shaping this project and helping us achieve our goals.
+## 💾 Deployment
+- Load **`lstm_model_weights.pth`** and **`scaler.save`**
+- Deploy with **Streamlit** (this repo) or **Flask**
+- Optional: containerize with **Docker** for cloud deployment
+
+---
+
+## 📚 Tech Stack
+- Python 🐍
+- PyTorch 🔥
+- NumPy & Pandas
+- scikit-learn
+- Matplotlib & Seaborn
+
+---
+
+## 👤 Author
+**Dante Santurian** – University of Michigan
+
