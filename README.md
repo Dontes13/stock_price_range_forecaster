@@ -24,8 +24,8 @@ This project implements and compares two deep learning models — **LSTM** and *
 ## 📊 Results
 | Model | MSE (Open) | MSE (Close) |
 |------|-------------|-------------|
-| LSTM | _e.g., 10.7422_ | _e.g., 16.8829_ |
-| GRU  | _e.g., 62.9326_ | _e.g., 50.9872_ |
+| LSTM | _10.7422_ | _16.8829_ |
+| GRU  | _62.9326_ |  _50.9872_ |
 
 > Replace the example numbers with your own metrics.
 
